@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'gradle build'
+        bat(script: 'gradle build', encoding: 'UTF-8', returnStatus: true, returnStdout: true)
       }
     }
   }
